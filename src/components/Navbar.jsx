@@ -16,10 +16,10 @@ const Navbar = () => {
         <NavLink to="/" className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
             <p className="blue-gradient_text">AR</p>
         </NavLink>
-        <nav className="flex text-lg gap-7 font-medium">
+        <nav className="flex text-lg gap-7 font-medium max-sm:text-[1rem]">
             <NavLink to="/about" className={({ isActive }) => isActive ? 'text-teal' : 'text-black'}>{t('about')}</NavLink>
             <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-teal' : 'text-black'}>{t('projects')}</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-teal' : 'text-black'}>{t('contact')}</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-teal max-sm:hidden' : 'text-black max-sm:hidden'}>{t('contact')}</NavLink>
             <button
               onClick={toggleLanguage}
               className="w-7 h-7 rounded-full bg-center bg-cover"

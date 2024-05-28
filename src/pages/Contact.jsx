@@ -7,8 +7,8 @@ import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import LinkedIn from "../assets/icons/linkedin.svg";
-import Github from "../assets/icons/github.svg";
+import LinkedIn from "../assets/images/linkedin.png";
+import Github from "../assets/images/github.png";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -69,6 +69,14 @@ const Contact = () => {
 
   const handleFocus = () => setcurrentAnimation('walk');
   const handleBlur = () => setcurrentAnimation('idle');
+
+  const toggleLinkedIn = () => {
+    window.location.href='https://www.linkedin.com/in/rafael-alejandro-rosales-muñoz-8665b1186/';
+  };
+
+  const toggleGithub = () => {
+    window.location.href='https://github.com/Ralejandro67';
+  };
   
 
   return (
@@ -130,13 +138,13 @@ const Contact = () => {
         </form>
         <div className='flex pt-8 w-full justify-center items-center'>
             <button 
-              onClick={() => window.location.href='https://www.linkedin.com/in/rafael-alejandro-rosales-muñoz-8665b1186/'} 
+              onClick={toggleLinkedIn} 
               className='w-12 h-12 rounded-full bg-center bg-cover mx-2'
               style={{ backgroundImage: `url(${LinkedIn})`}}
             >
             </button>
             <button 
-              onClick={() => window.location.href='https://github.com/Ralejandro67'} 
+              onClick={toggleGithub} 
               className='w-12 h-12 rounded-full bg-center bg-cover mx-2'
               style={{ backgroundImage: `url(${Github})`}}
             >

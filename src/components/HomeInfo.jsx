@@ -4,9 +4,9 @@ import { arrow } from '../assets/icons';
 import { useTranslation } from 'react-i18next';
 
 const InfoBox = ({ text, link, btnText}) => (
-    <div className="info-box">
-        <p className='font-medium sm:text-xl text-center'>{text}</p>
-        <Link to={link} className='neo-brutalism-white neo-btn' >
+    <div className="info-box max-sm:pb-8">
+        <p className='font-medium md:text-xl text-center max-sm:text-[1rem]'>{text}</p>
+        <Link to={link} className='neo-brutalism-white neo-btn max-sm:py-2' >
             {btnText}
             <img src={arrow} className='w-4 h-4 object-contain'/>
         </Link>
