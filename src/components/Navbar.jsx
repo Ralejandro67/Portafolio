@@ -22,7 +22,7 @@ const Navbar = () => {
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-teal' : 'text-black'}>{t('contact')}</NavLink>
             <button
               onClick={toggleLanguage}
-              className="w-7 h-7 rounded-full bg-center bg-cover border-[1px] border-black"
+              className="w-7 h-7 rounded-full bg-center bg-cover"
               style={{
                 backgroundImage: `url(${i18n.language === 'es' ? Spain : Uk})`
               }}
