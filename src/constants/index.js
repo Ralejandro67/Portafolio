@@ -155,44 +155,44 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Representante de Atención al Cliente",
+        title: "experience1_title",
         company_name: "Sykes",
         icon: sykes,
         iconBg: "#DAF1F9",
-        date: "Octubre 2019 - Enero 2020",
+        date: "experience1_date",
         points: [
-            "Proveía excepcional servicio al cliente a clientes que tenían problemas con sus existentes cuentas bancarias, accesos, creación de nuevas cuentas, problemas con sus tarjetas y preguntas en general."
+            "experience1_point1"
         ],
     },
     {
-        title: "Representante en Exportaciones",
+        title: "experience2_title",
         company_name: "CMA CGM Group",
         icon: cmacgm,
         iconBg: "#B0DEFF",
-        date: "Marzo 2020 - Mayo 2021",
+        date: "experience2_date",
         points: [
-            "Supervise las solicitudes de reserva de clientes en EE. UU. que desean exportar sus productos a otros países. Garantizaba el cumplimiento de las restricciones a las que pueda estar sujeta cualquier solicitud. Proporcionar confirmaciones de reserva o dar seguimiento a dichas solicitudes a sus respectivos propietarios."
+            "experience2_point1"
         ],
     },
     {
-        title: "Asociado en ML AVOC ",
+        title: "experience3_title",
         company_name: "Amazon",
         icon: amazon,
         iconBg: "#FFE5B9",
-        date: "Julio 2021 - Enero 2023",
+        date: "experience3_date",
         points: [
-            "Supervise el proceso de almacenamiento de productos en los centros logísticos de Amazon alrededor del mundo, con el fin de proporcionar un análisis cognitivo de las actividades realizadas y actuar o escalar sistemáticamente en consecuencia con precisión y rapidez con el fin de enseñarle a una IA a realizar todas las mismas actividades."
+            "experience3_point1"
         ],
     },
     {
-        title: "Investigation Specialist",
+        title: "experience4_title",
         company_name: "Amazon",
         icon: amazon,
         iconBg: "#FFE5B9",
-        date: "Enero 2023 - Enero 2024",
+        date: "experience4_date",
         points: [
-            "Responable de investigar y analizar transacciones de alto riesgo.", 
-            "Investigaba actividad sospechosa categorizada como posibles fraudes y comportamientos que podrian representar un riesgo, así como también de prevenir futuros problemas de fraude."
+            "experience4_point1",
+            "experience4_point2",
         ],
     },
 ];
@@ -206,12 +206,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Ralejandro67',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/rafael-alejandro-rosales-muñoz-8665b1186/',
     }
 ];
 
@@ -219,81 +219,74 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'project1_name',
+        description: 'project1_description',
+        link: 'https://github.com/Ralejandro67/Portafolio/blob/main/README.md',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'project2_name',
+        description: 'project2_description',
+        link: 'https://github.com/Ralejandro67/Public_Sistema_Contable/blob/master/README.md',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'project3_name',
+        description: 'project3_description',
+        link: 'https://github.com/Ralejandro67/2048/blob/main/README.md',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'project4_name',
+        description: 'project4_description',
+        link: 'https://github.com/Ralejandro67/ZoomClone/blob/master/README.md',
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-yellow',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    }
 ];
 
 export const university = [
     {
         iconUrl: education,
         theme: 'btn-back-red',
-        name: 'Diploma de Bachillerato',
-        description: 'Escuela Panamericana, El Salvador. Diplomas de Secundaria, graduado como estudiante de los Estados Unidos y como estudiante en El Salvador. ',
-        time: 'Octubre 2015 - Junio 2028'
+        name: 'university1_name',
+        description: 'university1_description',
+        time: 'university1_time'
     },
     {
         iconUrl: education,
         theme: 'btn-back-green',
-        name: 'Licenciatura en Ingeniería en Software',
-        description: 'Universidad Internacional de las Americas, Costa Rica.',
-        time: 'Enero 2019 - Abril 2024'
+        name: 'university2_name',
+        description: 'university2_description',
+        time: 'university2_time'
     },
     {
         iconUrl: note,
         theme: 'btn-back-blue',
-        name: 'Certificación como Desarrollador Junior',
-        description: 'Certificación enfocada en Back-end, Oracle ONE.',
-        time: 'Diciembre 2022 - Mayo 2023'
+        name: 'university3_name',
+        description: 'university3_description',
+        time: 'university3_time'
     },
     {
         iconUrl: note,
         theme: 'btn-back-pink',
-        name: 'Certificación en Advanced Python',
-        description: 'Udemy.',
-        time: 'Septiembre 2022 - Noviembre 2022'
+        name: 'university4_name',
+        description: 'university4_description',
+        time: 'university4_time'
     },
     {
         iconUrl: note,
         theme: 'btn-back-black',
-        name: 'Certificación en Advanced C#',
-        description: 'Udemy.',
-        time: 'Noviembre 2022 - Enero 2023'
+        name: 'university5_name',
+        description: 'university5_description',
+        time: 'university5_time'
     },
     {
         iconUrl: note,
         theme: 'btn-back-yellow',
-        name: 'Certificación en SCRUM',
-        description: 'SCRUM study.',
-        time: 'Diciembre 2022 - Diciembre 2022'
+        name: 'university6_name',
+        description: 'university6_description',
+        time: 'university6_time'
     }
 ];

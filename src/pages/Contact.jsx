@@ -5,8 +5,13 @@ import Duck from '../models/Duck';
 import Loader from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import LinkedIn from "../assets/icons/linkedin.svg";
+import Github from "../assets/icons/github.svg";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +30,7 @@ const Contact = () => {
 
     if (!form.name || !form.email || !form.message) {
       setIsLoading(false);
-      showAlert({ show: true, text: 'Por favor, completa todos los campos.', type: 'danger' });
+      showAlert({ show: true, text: t('contactPage_AlertF'), type: 'danger' });
 
       setTimeout(() => {
         hideAlert();
@@ -47,7 +52,7 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
-      showAlert({ show: true, text: 'Mensaje enviado correctamente.', type: 'success' });
+      showAlert({ show: true, text: t('contactPage_AlertS'), type: 'success' });
 
       setTimeout(() => {
         hideAlert();
@@ -57,7 +62,7 @@ const Contact = () => {
 
     }).catch((error) => {
       setIsLoading(false);
-      showAlert({ show: true, text: 'Error al mandar el mensaje.', type: 'danger' });
+      showAlert({ show: true, text: t('contactPage_AlertE'), type: 'danger' });
       setcurrentAnimation('idle');
     })
   };
@@ -70,17 +75,17 @@ const Contact = () => {
     <section className='relative flex lg:flex-row flex-col max-container'>
       {alert.show && <Alert{...alert} />}
       <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='head-text'>Ponte en contacto</h1>
+        <h1 className='head-text'>{t('contactPage_Title')}</h1>
         <form className='w-full flex flex-col gap-7 mt-14'
           onSubmit={handleSubmit}
         >
           <label className='text-black-500 font-semibold'>
-            Nombre
+            {t('contactPage_Name')}
             <input 
               type='text' 
               className='input' 
               name='name' 
-              placeholder='Tu nombre...'  
+              placeholder={t('contactPage_NameP')}
               value={form.name}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -88,12 +93,12 @@ const Contact = () => {
             />
           </label>
           <label className='text-black-500 font-semibold'>
-            Correo Electrónico
+            {t('contactPage_Email')}
             <input 
               type='email' 
               className='input' 
               name='email' 
-              placeholder='ejemplo@mail.com' 
+              placeholder={t('contactPage_EmailP')}
               value={form.email}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -101,12 +106,12 @@ const Contact = () => {
             />
           </label>
           <label className='text-black-500 font-semibold'>
-            Mensaje
+            {t('contactPage_Message')}
             <textarea 
               className='textarea'
               rows={4} 
               name='message' 
-              placeholder='En que puedo ayudarte?...' 
+              placeholder={t('contactPage_MessageP')}
               value={form.message}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -120,9 +125,23 @@ const Contact = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
-            {isLoading ? 'Enviando...' : 'Enviar'}
+            {isLoading ? t('contactPage_Btn1') : t('contactPage_Btn2')}
           </button>
         </form>
+        <div className='flex pt-8 w-full justify-center items-center'>
+            <button 
+              onClick={() => window.location.href='https://www.linkedin.com/in/rafael-alejandro-rosales-muñoz-8665b1186/'} 
+              className='w-12 h-12 rounded-full bg-center bg-cover mx-2'
+              style={{ backgroundImage: `url(${LinkedIn})`}}
+            >
+            </button>
+            <button 
+              onClick={() => window.location.href='https://github.com/Ralejandro67'} 
+              className='w-12 h-12 rounded-full bg-center bg-cover mx-2'
+              style={{ backgroundImage: `url(${Github})`}}
+            >
+            </button>
+          </div>
       </div>
       <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
         <Canvas camera={{

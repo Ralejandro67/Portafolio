@@ -5,21 +5,19 @@ import { Link } from 'react-router-dom';
 import { tealarrow } from '../assets/icons';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from '../components/CTA';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section className='max-container'>
-      <h1 className='head-text'>Hola, mi nombre es <span className='blue-gradient_text font-semibold drop-shadow'>Alejandro Rosales</span></h1>
+      <h1 className='head-text'>{t('aboutPage_intro')}<span className='blue-gradient_text font-semibold drop-shadow'>Alejandro Rosales</span></h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>
-          Soy un Ingeniero en Software de 25 años de nacionalidad Salvadoreña que vive en 
-          Costa Rica, soy un desarrollador Full Stack con dominio en distintos lenguajes de programacion, 
-          Back End y Front End frameworks y bases de datos locales y en la nube. Me apasiona el solucionador 
-          problemas, y disfruto los desafíos al momento de programar.
-        </p>
+        <p>{t('aboutPage_description')}</p>
       </div>
       <div className='py-10 flex flex-col'>
-        <h3 className='subhead-text'>Mis habilidades incluyen:</h3>
+        <h3 className='subhead-text'>{t('aboutPage_skills')}</h3>
         <div className='mt-16 flex flex-wrap gap-11'>
           {skills.map((skill) => (
             <div key={skill.name} className='block-container w-20 h-20 group'>
@@ -39,20 +37,16 @@ const About = () => {
         </div>
       </div>
       <div className='py-16'>
-        <h3 className='subhead-text'>Experiencia Laboral:</h3>
+        <h3 className='subhead-text'>{t('aboutPage_expTitle')}</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-          <p>
-            He tenido la oportunidad de trabajar en distintas empresas, en donde, he desarrollado 
-            un conjunto de habilidades, permitiendome destacar en areas como gestión de proyectos
-            iniciativa en liderazgo, trabajo en equipo y optimización de procesos.
-          </p>
+          <p>{t('aboutPage_expDescription')}</p>
         </div>
         <div className='mt-12 flex'>
           <VerticalTimeline>
             {experiences.map((experience) => (
               <VerticalTimelineElement 
                 key={experience.title} 
-                date={experience.date} 
+                date={t(experience.date)} 
                 icon={
                 <div className='flex justify-center items-center w-full h-full'>
                   <img 
@@ -73,7 +67,7 @@ const About = () => {
               >
                 <div>
                   <h3 className='text-black text-xl font-poppins font-semibold'>
-                    {experience.title}
+                    {t(experience.title)}
                   </h3>
                   <p className='text-black-500 font-medium font-base' style={{margin:0}}>
                     {experience.company_name}
@@ -82,7 +76,7 @@ const About = () => {
                 <ul className='my-5 list-disc ml-5 space-y-2'>
                   {experience.points.map((point, index) => (
                     <li key={`experience-point-${index}`} className='text-slate-500 font-normal pl-1 text-sm'>
-                      {point}
+                      {t(point)}
                     </li>
                   ))}
                 </ul>
@@ -92,7 +86,7 @@ const About = () => {
         </div>
       </div>
       <div className='pt-6'>
-        <h3 className='subhead-text'>Educación y Certificaciones:</h3>
+        <h3 className='subhead-text'>{t('aboutPage_Education')}</h3>
         <div className='flex flex-wrap mb-20 mt-12 gap-16'>
           {university.map((prep) => (
             <div className='lg:w-[400px] w-full' key={prep.name}>
@@ -108,10 +102,10 @@ const About = () => {
               </div>
               <div className='mt-5 flex flex-col'>
                 <h4 className='text-2xl font-poppins font-semibold'>
-                  {prep.name}
+                  {t(prep.name)}
                 </h4>
                 <p className='text-slate-500'>
-                  {prep.description}<br/>{prep.time}
+                  {t(prep.description)}<br/>{t(prep.time)}
                 </p>
               </div>
             </div>
